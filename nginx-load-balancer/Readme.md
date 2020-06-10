@@ -1,11 +1,14 @@
 # installing load balancer on NGINX
 
 In this example we will use AWS to create 3 EC2 instances(ubuntu) 
-first two instances will have apache installed on them that will host our sample website and by configuring NGINX on third machine we will use it as a load balancer
 
+> First two instances will have apache installed on them that will host our sample website and by configuring NGINX on third machine we  will use it as a load balancer
+
+```
 Load Balancer: Private IP: 172.31.62.104 ; Public IP: 34.207.237.138
 Machine 1:     Private IP: 172.31.60.216 ; Public IP: 100.24.240.169
 Machine 2:     Private IP: 172.31.58.117 ; Public IP: 34.229.56.240
+```
 
 ## Step 1: install Apache on both machines
 
