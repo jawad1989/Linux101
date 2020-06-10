@@ -49,7 +49,7 @@ Machine 2:     Private IP: 172.31.58.117 ; Public IP: 34.229.56.240
 ## Step 2: install Apache on both machines Now we will install Nginx Server and configure on Load Balancer on `Server`
 1. Install Nginx server
 ```
-sudo apt isntall nginx -y
+sudo apt install nginx -y
 ```
 2. update the conf file 
 ```
