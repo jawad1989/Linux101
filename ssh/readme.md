@@ -20,3 +20,12 @@ nowfrom master machine, type below command
 ```
 ssh vagrant@192.168.56.3
 ```
+
+
+# if ssh not working
+if ssh for some reason not working, u can change config in `/etc/ssh/sshd_config`
+
+1. open ssh_config
+2. change `PubkeyAuthentication` to `no`
+3. change `PasswordAuthentication` to `yes`
+4. try ssh, this time ssh will require a password not a ssh key
