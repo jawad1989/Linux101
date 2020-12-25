@@ -1,4 +1,22 @@
-In this example we will setup a NFS Server and NFS client for persistent Data Storage
+# if using Vagnrant
+with vagrant i was running into permssion denied error while mounting nfs on client.
+below is the fix:
+#### on nfs-server
+ in etc/exports file
+ ```
+ /mnt/kubedata *(rw,sync,fsid=0,no_subtree_check,insecure)
+ ```
+  
+ * sudo exportfs -rav
+ * sudo systemctl stop nfs-kernel-server.service
+ * sudo systemctl disable nfs-kernel-server.service
+ * sudo systemctl enable nfs-kernel-server.service
+ * sudo systemctl start nfs-kernel-server.service
+ 
+### on client
+sudo mount -t nfs4  192.168.33.10:/mnt/kubedata /nfs
+
+# without vagrantIn this example we will setup a NFS Server and NFS client for persistent Data Storage
 
 Server: 172.31.51.243
 Client1 :172.31.58.117 
