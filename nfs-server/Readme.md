@@ -1,6 +1,9 @@
 # if using Vagnrant
-with vagrant i was running into permssion denied error while mounting nfs on client.
-below is the fix:
+with vagrant i was running into permssion denied error while mounting nfs on client. below is the fix:
+
+#### install guest tools
+vagrant plugin install vagrant-vbguest
+
 #### on nfs-server
  in etc/exports file
  ```
